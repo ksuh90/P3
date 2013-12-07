@@ -1,0 +1,418 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<XnaContent xmlns:Graphics="Microsoft.Xna.Framework.Content.Pipeline.Graphics" xmlns:Framework="Microsoft.Xna.Framework">
+  <Asset Type="Graphics:NodeContent">
+    <Name>RootNode</Name>
+    <Identity>
+      <SourceFilename>C:\Users\nlangolf\Documents\Visual Studio 2010\Projects\Project3\PrisonStepContent\Alien-stance.FBX</SourceFilename>
+      <SourceTool>FbxImporter</SourceTool>
+    </Identity>
+    <Transform>1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1</Transform>
+    <Children>
+      <Child Type="Graphics:MeshContent">
+        <Name>alien</Name>
+        <OpaqueData>
+          <Data Key="MaxHandle" Type="int">1</Data>
+        </OpaqueData>
+        <Transform>0.269999981 0 0 0 0 0.269999981 0 0 0 0 0.269999981 0 0 0 0 1</Transform>
+        <Positions>-21.8775387 376.4665 26.2584934 -36.971756 354.3691 -11.3094664 -28.1875973 374.248077 20.57793 -21.8775387 376.4665 26.2584934 -21.8775387 376.4665 26.2584934 -28.1875973 374.248077 20.57793 -28.1875973 374.248077 20.57793 -36.971756 354.3691 -11.3094664 -36.971756 354.3691 -11.3094664 -36.971756 354.3691 -11.3094664 -28.1875973 374.248077 20.57793 -28.1875973 374.248077 20.57793 -28.1875973 374.248077 20.57793 -21.8775387 376.4665 26.2584934 -21.8775387 376.4665 26.2584934 -1.20810068 0 57.4692955 21.43863 0 51.86525 0.788709939 0 40.80359</Positions>
+        <Geometry>
+          <Batch>
+            <Material>#Resource1</Material>
+            <Indices>2 1 0</Indices>
+            <Vertices>
+              <PositionIndices>15 16 17</PositionIndices>
+              <Channels>
+                <VertexChannel Name="Weights0" ElementType="Graphics:BoneWeightCollection">
+                  <Bones>
+                    <Bone>Bip01 Pelvis</Bone>
+                  </Bones>
+                  <Weights>0 1 / 0 1 / 0 1</Weights>
+                </VertexChannel>
+                <VertexChannel Name="Normal0" ElementType="Framework:Vector3">0 1 0 0 1 0 0 1 0</VertexChannel>
+                <VertexChannel Name="TextureCoordinate0" ElementType="Framework:Vector2">0.5 0.5 0.5 0.5 0.5 0.5</VertexChannel>
+              </Channels>
+            </Vertices>
+          </Batch>
+        </Geometry>
+      </Child>
+      <Child>
+        <Name>Dummy001</Name>
+        <OpaqueData>
+          <Data Key="MaxHandle" Type="int">200</Data>
+        </OpaqueData>
+        <Transform>1 0 0 0 0 2.83276934E-16 -1 0 0 1 2.83276934E-16 0 -0.2266388 0 1.57550049 1</Transform>
+        <Animations>
+          <Animation Key="Take 001">
+            <Name>Take 001</Name>
+            <Duration>PT0.033S</Duration>
+            <Channels>
+              <Channel Key="Dummy001">
+                <Keyframe>
+                  <Time>PT0S</Time>
+                  <Transform>1 0 0 0 0 2.83276934E-16 -1 0 0 1 2.83276934E-16 0 -0.2266388 0 1.57550049 1</Transform>
+                </Keyframe>
+                <Keyframe>
+                  <Time>PT0.0166666S</Time>
+                  <Transform>1 0 0 0 0 2.83276934E-16 -1 0 0 1 2.83276934E-16 0 -0.2266388 1.02894592 1.57550049 1</Transform>
+                </Keyframe>
+              </Channel>
+            </Channels>
+          </Animation>
+        </Animations>
+      </Child>
+      <Child Type="Graphics:BoneContent">
+        <Name>Bip01</Name>
+        <OpaqueData>
+          <Data Key="MaxHandle" Type="int">8</Data>
+        </OpaqueData>
+        <Transform>1.73105457E-06 6.091725E-10 0.99999994 0 0.99999994 -5.521657E-10 -1.73105457E-06 0 5.521647E-10 1 -6.091735E-10 0 0 98.1865 2.38418579E-07 1</Transform>
+        <Children>
+          <Child>
+            <Name>Bip01 Footsteps</Name>
+            <OpaqueData>
+              <Data Key="MaxHandle" Type="int">38</Data>
+            </OpaqueData>
+            <Transform>3.46210936E-06 0.99999994 5.521636E-10 0 -0.99999994 3.46210936E-06 1.2183472E-09 0 1.21834531E-09 -5.521678E-10 1 0 -5.979508E-08 5.419937E-08 -98.15779 1</Transform>
+          </Child>
+          <Child Type="Graphics:BoneContent">
+            <Name>Bip01 Pelvis</Name>
+            <OpaqueData>
+              <Data Key="MaxHandle" Type="int">9</Data>
+            </OpaqueData>
+            <Transform>-7.324545E-08 -0.0426642 0.9990895 0 0.9999999 -3.45562427E-07 5.855562E-08 0 3.4274953E-07 0.99908936 0.0426642 0 -2.68847632 0.621527851 1.980922E-09 1</Transform>
+            <Children>
+              <Child Type="Graphics:BoneContent">
+                <Name>Bip01 Spine</Name>
+                <OpaqueData>
+                  <Data Key="MaxHandle" Type="int">10</Data>
+                </OpaqueData>
+                <Transform>0.9999157 -0.00739212148 0.0106689977 0 0.00738920458 0.9999726 0.00031280634 0 -0.0106710205 -0.0002339446 0.999943 0 9.809865 -0.008832439 0.418911517 1</Transform>
+                <Children>
+                  <Child Type="Graphics:BoneContent">
+                    <Name>Bip01 Spine1</Name>
+                    <OpaqueData>
+                      <Data Key="MaxHandle" Type="int">11</Data>
+                    </OpaqueData>
+                    <Transform>0.9998136 -0.00204750826 -0.019202916 0 0.00204810826 0.9999982 1.16829933E-05 0 0.0192028433 -5.10104765E-05 0.999815643 0 11.0995474 -0.008838104 -8.146449E-07 1</Transform>
+                    <Children>
+                      <Child Type="Graphics:BoneContent">
+                        <Name>Bip01 Spine2</Name>
+                        <OpaqueData>
+                          <Data Key="MaxHandle" Type="int">12</Data>
+                        </OpaqueData>
+                        <Transform>0.9994857 -0.0020468072 0.032001283 0 0.00204847916 0.9999978 -1.9466097E-05 0 -0.032001175 8.5010106E-05 0.999487758 0 11.0995808 -0.008838153 4.46438349E-07 1</Transform>
+                        <Children>
+                          <Child Type="Graphics:BoneContent">
+                            <Name>Bip01 Spine3</Name>
+                            <OpaqueData>
+                              <Data Key="MaxHandle" Type="int">13</Data>
+                            </OpaqueData>
+                            <Transform>0.9998135 -0.00204761559 0.01920289 0 0.00204821839 0.999998033 -1.16821429E-05 0 -0.0192028154 5.10116261E-05 0.999815643 0 11.0995588 -0.00883815 -3.61990061E-07 1</Transform>
+                            <Children>
+                              <Child Type="Graphics:BoneContent">
+                                <Name>Bip01 Neck</Name>
+                                <OpaqueData>
+                                  <Data Key="MaxHandle" Type="int">29</Data>
+                                </OpaqueData>
+                                <Transform>0.7068301 0.7073836 1.96192173E-06 0 -0.7073835 0.706829965 -8.13206952E-07 0 -1.95286748E-06 -8.130117E-07 1 0 11.1117954 -0.0121918432 -4.81932432E-08 1</Transform>
+                                <Children>
+                                  <Child Type="Graphics:BoneContent">
+                                    <Name>Bip01 Head</Name>
+                                    <OpaqueData>
+                                      <Data Key="MaxHandle" Type="int">28</Data>
+                                    </OpaqueData>
+                                    <Transform>0.997841954 0.06563449 0.00183760654 0 -0.0656375661 0.997842133 0.00165051629 0 -0.00172531069 -0.001767571 0.999997 0 21.65264 4.312387E-06 7.82727838E-08 1</Transform>
+                                    <Children>
+                                      <Child Type="Graphics:BoneContent">
+                                        <Name>Bip01 HeadNub</Name>
+                                        <OpaqueData>
+                                          <Data Key="MaxHandle" Type="int">43</Data>
+                                        </OpaqueData>
+                                        <Transform>0.99999994 9.695949E-09 1.79679674E-10 0 -1.24680914E-08 1 2.74623435E-09 0 1.12004217E-09 -2.00388373E-09 0.99999994 0 20.0646324 1.23628661E-05 6.379217E-08 1</Transform>
+                                      </Child>
+                                    </Children>
+                                  </Child>
+                                  <Child Type="Graphics:BoneContent">
+                                    <Name>Bip01 L Clavicle</Name>
+                                    <OpaqueData>
+                                      <Data Key="MaxHandle" Type="int">20</Data>
+                                    </OpaqueData>
+                                    <Transform>-0.0999929 0.100227945 0.989927232 0 -0.7079461 -0.7062666 -1.96510769E-06 0 0.6991523 -0.7008154 0.1415776 0 -1.043276E-07 0.0172364451 2.98835254 1</Transform>
+                                    <Children>
+                                      <Child Type="Graphics:BoneContent">
+                                        <Name>Bip01 L UpperArm</Name>
+                                        <OpaqueData>
+                                          <Data Key="MaxHandle" Type="int">21</Data>
+                                        </OpaqueData>
+                                        <Transform>0.210945055 0.141929209 -0.9671392 0 0.04434357 0.9869948 0.154515043 0 0.976491868 -0.0754806 0.201908156 0 17.692646 4.15875235E-07 -3.91102549E-06 1</Transform>
+                                        <Children>
+                                          <Child Type="Graphics:BoneContent">
+                                            <Name>Bip01 L Forearm</Name>
+                                            <OpaqueData>
+                                              <Data Key="MaxHandle" Type="int">22</Data>
+                                            </OpaqueData>
+                                            <Transform>0.9789386 -0.2041546 -1.37432057E-08 0 0.204154611 0.9789386 4.00827673E-08 0 1.365292E-07 -1.65496E-08 1 0 36.66224 -1.836497E-07 3.23387184E-07 1</Transform>
+                                            <Children>
+                                              <Child Type="Graphics:BoneContent">
+                                                <Name>Bip01 L Hand</Name>
+                                                <OpaqueData>
+                                                  <Data Key="MaxHandle" Type="int">23</Data>
+                                                </OpaqueData>
+                                                <Transform>0.9965955 5.039893E-09 0.08244617 0 0.08244615 0.000796282256 -0.9965952 0 -6.565961E-05 0.9999996 0.000793569663 0 28.7596684 -2.52624068E-06 -2.93055746E-06 1</Transform>
+                                                <Children>
+                                                  <Child Type="Graphics:BoneContent">
+                                                    <Name>Bip01 L Finger0</Name>
+                                                    <OpaqueData>
+                                                      <Data Key="MaxHandle" Type="int">30</Data>
+                                                    </OpaqueData>
+                                                    <Transform>1 -1.83241955E-08 2.60760036E-09 0 3.959555E-08 0.9999996 -0.000796329463 0 -2.80870238E-09 0.0007963158 0.999999642 0 10.6727009 3.73797178E-07 4.26708368E-07 1</Transform>
+                                                    <Children>
+                                                      <Child Type="Graphics:BoneContent">
+                                                        <Name>Bip01 L Finger0Nub</Name>
+                                                        <OpaqueData>
+                                                          <Data Key="MaxHandle" Type="int">40</Data>
+                                                        </OpaqueData>
+                                                        <Transform>1.00000012 5.915686E-09 9.218404E-10 0 7.719597E-09 1.00000012 6.006925E-10 0 -4.456262E-10 -1.993044E-09 0.99999994 0 2.66817117 -1.502104E-06 -9.377921E-07 1</Transform>
+                                                      </Child>
+                                                    </Children>
+                                                  </Child>
+                                                </Children>
+                                              </Child>
+                                            </Children>
+                                          </Child>
+                                        </Children>
+                                      </Child>
+                                    </Children>
+                                  </Child>
+                                  <Child Type="Graphics:BoneContent">
+                                    <Name>Bip01 R Clavicle</Name>
+                                    <OpaqueData>
+                                      <Data Key="MaxHandle" Type="int">24</Data>
+                                    </OpaqueData>
+                                    <Transform>-0.09999294 0.100233473 -0.9899265 0 -0.7079461 -0.7062666 -1.95273856E-06 0 -0.6991522 0.7008145 0.141581535 0 9.775067E-06 0.0172420442 -2.988353 1</Transform>
+                                    <Children>
+                                      <Child Type="Graphics:BoneContent">
+                                        <Name>Bip01 R UpperArm</Name>
+                                        <OpaqueData>
+                                          <Data Key="MaxHandle" Type="int">25</Data>
+                                        </OpaqueData>
+                                        <Transform>0.239476 0.04941769 0.9696439 0 -0.0102377245 0.9987768 -0.0483741164 0 -0.970848441 0.00165748014 0.239689082 0 17.6926441 9.191535E-08 7.15906663E-06 1</Transform>
+                                        <Children>
+                                          <Child Type="Graphics:BoneContent">
+                                            <Name>Bip01 R Forearm</Name>
+                                            <OpaqueData>
+                                              <Data Key="MaxHandle" Type="int">26</Data>
+                                            </OpaqueData>
+                                            <Transform>0.9569764 -0.290165663 3.5705186E-10 0 0.290165663 0.9569763 2.05989914E-09 0 -1.4976365E-07 5.69069725E-09 1 0 36.6622276 2.91924067E-07 5.95590973E-06 1</Transform>
+                                            <Children>
+                                              <Child Type="Graphics:BoneContent">
+                                                <Name>Bip01 R Hand</Name>
+                                                <OpaqueData>
+                                                  <Data Key="MaxHandle" Type="int">27</Data>
+                                                </OpaqueData>
+                                                <Transform>0.9965956 2.16141753E-08 -0.08244619 0 0.08244614 0.00079628377 0.996595144 0 6.570457E-05 -0.999999762 0.000793575367 0 28.759676 1.826443E-06 -4.59286639E-07 1</Transform>
+                                                <Children>
+                                                  <Child Type="Graphics:BoneContent">
+                                                    <Name>Bip01 R Finger0</Name>
+                                                    <OpaqueData>
+                                                      <Data Key="MaxHandle" Type="int">31</Data>
+                                                    </OpaqueData>
+                                                    <Transform>1 -5.411764E-09 -1.95255034E-09 0 -2.106619E-08 0.9999998 0.000796327542 0 4.46632029E-08 -0.0007963261 0.9999997 0 10.6726856 -1.83029829E-06 3.17409126E-06 1</Transform>
+                                                    <Children>
+                                                      <Child Type="Graphics:BoneContent">
+                                                        <Name>Bip01 R Finger0Nub</Name>
+                                                        <OpaqueData>
+                                                          <Data Key="MaxHandle" Type="int">39</Data>
+                                                        </OpaqueData>
+                                                        <Transform>1.00000012 8.999734E-09 -2.24638663E-09 0 1.9631885E-09 1.00000012 5.22652854E-09 0 9.902754E-09 6.48610943E-09 -1.00000012 0 2.66818929 -1.6734889E-06 -7.87574947E-08 1</Transform>
+                                                      </Child>
+                                                    </Children>
+                                                  </Child>
+                                                </Children>
+                                              </Child>
+                                            </Children>
+                                          </Child>
+                                        </Children>
+                                      </Child>
+                                    </Children>
+                                  </Child>
+                                </Children>
+                              </Child>
+                            </Children>
+                          </Child>
+                        </Children>
+                      </Child>
+                    </Children>
+                  </Child>
+                  <Child Type="Graphics:BoneContent">
+                    <Name>Bip01 L Thigh</Name>
+                    <OpaqueData>
+                      <Data Key="MaxHandle" Type="int">14</Data>
+                    </OpaqueData>
+                    <Transform>-0.993024945 0.115407862 -0.0241378788 0 0.115382925 0.9933183 0.00242729415 0 0.024256723 -0.000374735624 -0.999705851 0 -9.690536 -0.0601576939 11.2189016 1</Transform>
+                    <Children>
+                      <Child Type="Graphics:BoneContent">
+                        <Name>Bip01 L Calf</Name>
+                        <OpaqueData>
+                          <Data Key="MaxHandle" Type="int">15</Data>
+                        </OpaqueData>
+                        <Transform>0.9690854 -0.246725678 3.709115E-10 0 0.246725738 0.969085455 7.969746E-12 0 3.43918916E-09 -4.858387E-10 0.99999994 0 40.58723 -9.817697E-08 1.55014959E-06 1</Transform>
+                        <Children>
+                          <Child Type="Graphics:BoneContent">
+                            <Name>Bip01 L Foot</Name>
+                            <OpaqueData>
+                              <Data Key="MaxHandle" Type="int">16</Data>
+                            </OpaqueData>
+                            <Transform>0.991931856 0.125894979 0.0148893865 0 -0.125904292 0.992042542 -0.000318687817 0 -0.01481102 -0.00155851978 0.999889135 0 48.942852 3.51092638E-07 -4.77701633E-07 1</Transform>
+                            <Children>
+                              <Child Type="Graphics:BoneContent">
+                                <Name>Bip01 L Toe0</Name>
+                                <OpaqueData>
+                                  <Data Key="MaxHandle" Type="int">32</Data>
+                                </OpaqueData>
+                                <Transform>-4.3587316E-09 1 2.16490229E-11 0 -1.00000012 -3.56929723E-14 -4.39313759E-08 0 -4.25345235E-08 2.92258622E-14 1.00000012 0 9.818875 12.6364584 -5.221194E-07 1</Transform>
+                                <Children>
+                                  <Child Type="Graphics:BoneContent">
+                                    <Name>Bip01 L Toe0Nub</Name>
+                                    <OpaqueData>
+                                      <Data Key="MaxHandle" Type="int">42</Data>
+                                    </OpaqueData>
+                                    <Transform>1 -5.61693355E-07 -9.283729E-08 0 5.616936E-07 1.00000012 1.44904838E-10 0 -9.283728E-08 6.105543E-10 -1.00000012 0 1.28072107 1.1755118E-09 8.86739542E-07 1</Transform>
+                                  </Child>
+                                </Children>
+                              </Child>
+                            </Children>
+                          </Child>
+                        </Children>
+                      </Child>
+                    </Children>
+                  </Child>
+                  <Child Type="Graphics:BoneContent">
+                    <Name>Bip01 R Thigh</Name>
+                    <OpaqueData>
+                      <Data Key="MaxHandle" Type="int">17</Data>
+                    </OpaqueData>
+                    <Transform>-0.9518513 0.272891521 -0.139675215 0 0.270600945 0.962036669 0.03550904 0 0.144062757 -0.003996922 -0.989560544 0 -9.936616 -0.06740516 -11.84732 1</Transform>
+                    <Children>
+                      <Child Type="Graphics:BoneContent">
+                        <Name>Bip01 R Calf</Name>
+                        <OpaqueData>
+                          <Data Key="MaxHandle" Type="int">18</Data>
+                        </OpaqueData>
+                        <Transform>0.8964947 -0.4430547 -8.865545E-09 0 0.443054765 0.896494746 -3.0238485E-09 0 2.04780548E-08 -5.549383E-09 1 0 40.5872269 4.476754E-07 8.86764E-08 1</Transform>
+                        <Children>
+                          <Child Type="Graphics:BoneContent">
+                            <Name>Bip01 R Foot</Name>
+                            <OpaqueData>
+                              <Data Key="MaxHandle" Type="int">19</Data>
+                            </OpaqueData>
+                            <Transform>0.971195161 0.2077266 -0.116745114 0 -0.209323749 0.977844954 -0.00145444053 0 0.113856539 0.0258500818 0.9931608 0 48.94284 -3.29219461E-07 -8.84795952E-07 1</Transform>
+                            <Children>
+                              <Child Type="Graphics:BoneContent">
+                                <Name>Bip01 R Toe0</Name>
+                                <OpaqueData>
+                                  <Data Key="MaxHandle" Type="int">35</Data>
+                                </OpaqueData>
+                                <Transform>-5.4368563E-09 1.00000012 -2.56899924E-09 0 -1.00000012 6.344996E-10 4.36720562E-08 0 4.05003675E-09 1.50744994E-09 1.00000012 0 9.818874 12.63646 -2.62621029E-06 1</Transform>
+                                <Children>
+                                  <Child Type="Graphics:BoneContent">
+                                    <Name>Bip01 R Toe0Nub</Name>
+                                    <OpaqueData>
+                                      <Data Key="MaxHandle" Type="int">41</Data>
+                                    </OpaqueData>
+                                    <Transform>1.00000012 6.283327E-10 1.12870911E-11 0 -2.01211114E-09 1.00000012 6.015464E-10 0 1.08262566E-11 -2.17826757E-10 1.00000012 0 1.28072262 2.177954E-07 -5.40461144E-07 1</Transform>
+                                  </Child>
+                                </Children>
+                              </Child>
+                            </Children>
+                          </Child>
+                        </Children>
+                      </Child>
+                    </Children>
+                  </Child>
+                  <Child Type="Graphics:BoneContent">
+                    <Name>Bip01 Tail</Name>
+                    <OpaqueData>
+                      <Data Key="MaxHandle" Type="int">47</Data>
+                    </OpaqueData>
+                    <Transform>-0.933297932 -0.3577611 -0.0310190488 0 0.357572228 -0.9338133 0.0116262473 0 -0.03312541 -0.000240797759 0.9994512 0 -10.5624008 -7.5821867 -0.3381992 1</Transform>
+                    <Children>
+                      <Child Type="Graphics:BoneContent">
+                        <Name>Bip01 Tail1</Name>
+                        <OpaqueData>
+                          <Data Key="MaxHandle" Type="int">48</Data>
+                        </OpaqueData>
+                        <Transform>0.9877664 0.135903 0.07647229 0 -0.135266677 0.9907177 -0.0134631041 0 -0.0775921345 0.00295424229 0.996980846 0 20.8714867 -0.01646615 0.000223136172 1</Transform>
+                        <Children>
+                          <Child Type="Graphics:BoneContent">
+                            <Name>Bip01 Tail2</Name>
+                            <OpaqueData>
+                              <Data Key="MaxHandle" Type="int">49</Data>
+                            </OpaqueData>
+                            <Transform>0.982114732 0.120403208 0.144753858 0 -0.118292414 0.9927093 -0.0231335629 0 -0.146483824 0.005596529 0.9891972 0 20.8714275 -0.01831605 0.000425205479 1</Transform>
+                            <Children>
+                              <Child Type="Graphics:BoneContent">
+                                <Name>Bip01 Tail3</Name>
+                                <OpaqueData>
+                                  <Data Key="MaxHandle" Type="int">50</Data>
+                                </OpaqueData>
+                                <Transform>0.982325435 0.119620353 0.143970639 0 -0.11761672 0.9928068 -0.02237915 0 -0.145612061 0.005050239 0.9893289 0 23.172163 -0.0103465822 0.000234740291 1</Transform>
+                                <Children>
+                                  <Child Type="Graphics:BoneContent">
+                                    <Name>Bip01 Tail4</Name>
+                                    <OpaqueData>
+                                      <Data Key="MaxHandle" Type="int">51</Data>
+                                    </OpaqueData>
+                                    <Transform>0.990023255 0.129650384 0.055179812 0 -0.1293775 0.9915589 -0.008503652 0 -0.0558164753 0.00127975084 0.9984403 0 13.10438 -0.0134506682 0.00010932314 1</Transform>
+                                    <Children>
+                                      <Child Type="Graphics:BoneContent">
+                                        <Name>Bip01 Tail5</Name>
+                                        <OpaqueData>
+                                          <Data Key="MaxHandle" Type="int">52</Data>
+                                        </OpaqueData>
+                                        <Transform>0.829540849 0.5584462 1.551916E-06 0 -0.558446169 0.829540849 -4.5483327E-07 0 -1.50763606E-06 -4.919811E-07 1.00000012 0 17.0378819 -0.0243217386 3.32317268E-06 1</Transform>
+                                        <Children>
+                                          <Child Type="Graphics:BoneContent">
+                                            <Name>Bip01 TailNub</Name>
+                                            <OpaqueData>
+                                              <Data Key="MaxHandle" Type="int">46</Data>
+                                            </OpaqueData>
+                                            <Transform>0.0007964005 0.999999762 3.14947965E-06 0 0.9999998 -0.000796288659 5.448019E-09 0 7.402668E-09 3.14425779E-06 -1.00000012 0 36.8066368 6.447585E-07 2.70818373E-06 1</Transform>
+                                          </Child>
+                                        </Children>
+                                      </Child>
+                                    </Children>
+                                  </Child>
+                                </Children>
+                              </Child>
+                            </Children>
+                          </Child>
+                        </Children>
+                      </Child>
+                    </Children>
+                  </Child>
+                </Children>
+              </Child>
+            </Children>
+          </Child>
+        </Children>
+      </Child>
+    </Children>
+  </Asset>
+  <Resources>
+    <Resource ID="#Resource1" Type="Graphics:BasicMaterialContent">
+      <Name>01 - Default</Name>
+      <Identity>
+        <SourceFilename>C:\Users\nlangolf\Documents\Visual Studio 2010\Projects\Project3\PrisonStepContent\Alien-stance.FBX</SourceFilename>
+        <SourceTool>FbxImporter</SourceTool>
+      </Identity>
+      <OpaqueData>
+        <Data Key="DiffuseColor" Type="Framework:Vector3">0.5882353 0.5882353 0.5882353</Data>
+        <Data Key="EmissiveColor" Type="Framework:Vector3">0 0 0</Data>
+        <Data Key="Alpha" Type="float">1</Data>
+        <Data Key="SpecularColor" Type="Framework:Vector3">0 0 0</Data>
+        <Data Key="SpecularPower" Type="float">1.99999988</Data>
+      </OpaqueData>
+    </Resource>
+  </Resources>
+</XnaContent>

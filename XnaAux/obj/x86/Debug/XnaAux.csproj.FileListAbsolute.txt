@@ -1,0 +1,6 @@
+C:\Users\nlangolf\Documents\Visual Studio 2010\Projects\Project3\XnaAux\bin\x86\Debug\XnaAux.dll
+C:\Users\nlangolf\Documents\Visual Studio 2010\Projects\Project3\XnaAux\bin\x86\Debug\XnaAux.pdb
+C:\Users\nlangolf\Documents\Visual Studio 2010\Projects\Project3\XnaAux\obj\x86\Debug\XnaAux.csprojResolveAssemblyReference.cache
+C:\Users\nlangolf\Documents\Visual Studio 2010\Projects\Project3\XnaAux\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
+C:\Users\nlangolf\Documents\Visual Studio 2010\Projects\Project3\XnaAux\obj\x86\Debug\XnaAux.dll
+C:\Users\nlangolf\Documents\Visual Studio 2010\Projects\Project3\XnaAux\obj\x86\Debug\XnaAux.pdb

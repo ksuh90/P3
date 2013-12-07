@@ -277,8 +277,55 @@ namespace PrisonStep
 
 
 
+
+        private MouseState lastMouseState = Mouse.GetState();
+
         virtual protected void DrawModel(GraphicsDeviceManager graphics, Model model, Matrix world)
         {
+            MouseState currentMouseState = Mouse.GetState();
+            if (lastMouseState.LeftButton == ButtonState.Released && currentMouseState.LeftButton == ButtonState.Pressed)
+            {
+                bool clickedInValidRegion = true;
+                float mouseY = currentMouseState.Y;
+                if (mouseY < 0) clickedInValidRegion = false;
+                if (mouseY > graphics.GraphicsDevice.Viewport.Height) clickedInValidRegion = false;
+
+                float mouseX = currentMouseState.X;
+                if (mouseX < 0) clickedInValidRegion = false;
+                if (mouseX > graphics.GraphicsDevice.Viewport.Width) clickedInValidRegion = false;
+
+                if (clickedInValidRegion)
+                {
+                    //Determine point on near clipping plane
+                    Vector3 nearsource = new Vector3(mouseX, mouseY, 0);
+                    Vector3 nearPoint = graphics.GraphicsDevice.Viewport.Unproject(nearsource, game.Camera.Projection, game.Camera.View, Matrix.Identity);
+
+                    //Determine point on far clipping plane
+                    Vector3 farsource = new Vector3(mouseX, mouseY, 1);
+                    Vector3 farPoint = graphics.GraphicsDevice.Viewport.Unproject(farsource, game.Camera.Projection, game.Camera.View, Matrix.Identity);
+
+                    //The direction of the click
+                    Vector3 direction = farPoint - nearPoint;
+                    direction.Normalize();
+                    //  CHR5211
+
+                    //Origin is where you clicked; headed towards the far point
+                    Ray pickRay = new Ray(nearPoint, direction);
+
+                    foreach (ModelMesh mesh in model.Meshes)
+                    {
+                        BoundingSphere boundingSphere = mesh.BoundingSphere;
+                        boundingSphere = boundingSphere.Transform(world);
+                        float? distance = pickRay.Intersects(boundingSphere);
+                        if (distance != null)
+                        {
+                            Console.Out.WriteLine(distance);
+                        }
+                    }
+                }
+            }
+            lastMouseState = currentMouseState;
+
             if (skelToBone != null)
             {
                 for (int b = 0; b < skelToBone.Count; b++)

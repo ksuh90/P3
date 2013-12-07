@@ -1,7 +1,0 @@
-C:\Users\nlangolf\Documents\Visual Studio 2010\Projects\Project3\AnimationPipeline\bin\x86\Debug\AnimationPipeline.dll
-C:\Users\nlangolf\Documents\Visual Studio 2010\Projects\Project3\AnimationPipeline\bin\x86\Debug\AnimationPipeline.pdb
-C:\Users\nlangolf\Documents\Visual Studio 2010\Projects\Project3\AnimationPipeline\bin\x86\Debug\XnaAux.dll
-C:\Users\nlangolf\Documents\Visual Studio 2010\Projects\Project3\AnimationPipeline\bin\x86\Debug\XnaAux.pdb
-C:\Users\nlangolf\Documents\Visual Studio 2010\Projects\Project3\AnimationPipeline\obj\x86\Debug\AnimationPipeline.csprojResolveAssemblyReference.cache
-C:\Users\nlangolf\Documents\Visual Studio 2010\Projects\Project3\AnimationPipeline\obj\x86\Debug\AnimationPipeline.dll
-C:\Users\nlangolf\Documents\Visual Studio 2010\Projects\Project3\AnimationPipeline\obj\x86\Debug\AnimationPipeline.pdb

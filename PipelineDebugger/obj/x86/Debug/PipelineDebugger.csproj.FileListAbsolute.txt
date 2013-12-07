@@ -1,7 +1,0 @@
-C:\Users\nlangolf\Documents\Visual Studio 2010\Projects\Project3\PipelineDebugger\bin\Debug\Targets\Debugging.targets
-C:\Users\nlangolf\Documents\Visual Studio 2010\Projects\Project3\PipelineDebugger\bin\Debug\PipelineDebugger.exe.config
-C:\Users\nlangolf\Documents\Visual Studio 2010\Projects\Project3\PipelineDebugger\bin\Debug\PipelineDebugger.exe
-C:\Users\nlangolf\Documents\Visual Studio 2010\Projects\Project3\PipelineDebugger\bin\Debug\PipelineDebugger.pdb
-C:\Users\nlangolf\Documents\Visual Studio 2010\Projects\Project3\PipelineDebugger\obj\x86\Debug\PipelineDebugger.csprojResolveAssemblyReference.cache
-C:\Users\nlangolf\Documents\Visual Studio 2010\Projects\Project3\PipelineDebugger\obj\x86\Debug\PipelineDebugger.exe
-C:\Users\nlangolf\Documents\Visual Studio 2010\Projects\Project3\PipelineDebugger\obj\x86\Debug\PipelineDebugger.pdb

@@ -237,7 +237,7 @@ namespace PrisonStep
             List<Spit> spitsToRemove = new List<Spit>();
             foreach (Spit spit in shootingSpits)
             {
-                if (!spit.Update(delta)) { spitsToRemove.Add(spit); };
+                if (!spit.Update(delta, spit.MyTransform)) { spitsToRemove.Add(spit); };
             }
             foreach (Spit spit in spitsToRemove)
             {

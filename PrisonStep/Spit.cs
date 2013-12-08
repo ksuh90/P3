@@ -5,6 +5,7 @@ using System.Text;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Content;
 using Microsoft.Xna.Framework.Graphics;
+using Microsoft.Xna.Framework.Input;
 
 namespace PrisonStep
 {
@@ -16,6 +17,8 @@ namespace PrisonStep
         private PrisonGame game;
 
         private Matrix myTransform = Matrix.Identity;
+        private MouseState lastMouseState = Mouse.GetState();
+
         public Matrix MyTransform { get { return myTransform; } set { myTransform = value; } }
 
         private const float velocity = 100f;
@@ -42,11 +45,54 @@ namespace PrisonStep
         /// to the current game time.
         /// </summary>
         /// <param name="gameTime"></param>
-        public bool Update(double delta)
+        public bool Update(double delta, Matrix world)
         {
-                myTransform.Translation += directionShooting * velocity * (float)delta;
+                #region RayClickDetection
+                MouseState currentMouseState = Mouse.GetState();
+                if (lastMouseState.LeftButton == ButtonState.Released && currentMouseState.LeftButton == ButtonState.Pressed)
+                {
+                    float mouseY = currentMouseState.Y;
+                    float mouseX = currentMouseState.X;
 
-           
+                    // Only continue if you clicked in a valid region
+                    if (mouseY > 0 &&
+                        mouseY < game.Graphics.GraphicsDevice.Viewport.Height &&
+                        mouseX > 0 &&
+                        mouseX < game.Graphics.GraphicsDevice.Viewport.Width)
+                    {
+                        // Determine point on near clipping plane
+                        Vector3 nearsource = new Vector3(mouseX, mouseY, 0);
+                        Vector3 nearPoint = game.Graphics.GraphicsDevice.Viewport.Unproject(nearsource, game.Camera.Projection, game.Camera.View, Matrix.Identity);
+
+                        // Determine point on far clipping plane
+                        Vector3 farsource = new Vector3(mouseX, mouseY, 1);
+                        Vector3 farPoint = game.Graphics.GraphicsDevice.Viewport.Unproject(farsource, game.Camera.Projection, game.Camera.View, Matrix.Identity);
+
+                        // The direction of the click
+                        Vector3 direction = farPoint - nearPoint;
+                        direction.Normalize();
+
+                        // Origin is where you clicked; headed towards the far point
+                        Ray pickRay = new Ray(nearPoint, direction);
+
+                        foreach (ModelMesh mesh in game.PieModel.Meshes)
+                        {
+                            BoundingSphere boundingSphere = mesh.BoundingSphere;
+                            boundingSphere = boundingSphere.Transform(world);
+                            float? distance = pickRay.Intersects(boundingSphere);
+                            if (distance != null)
+                            {
+                                return false;
+                                //game.RemoveSpit(this);
+                                //Console.Out.WriteLine(distance);
+                            }
+                        }
+                    }
+                }
+                lastMouseState = currentMouseState;
+                #endregion RayClickDetection
+
+                myTransform.Translation += directionShooting * velocity * (float)delta;
 
                 string region = game.CollisionDetector.TestRegion(myTransform.Translation);
                 //If region doesn't exist, then you've hit a wall

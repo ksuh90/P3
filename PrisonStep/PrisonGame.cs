@@ -44,6 +44,7 @@ namespace PrisonStep
         /// This graphics device we are drawing on in this assignment
         /// </summary>
         GraphicsDeviceManager graphics;
+        public GraphicsDeviceManager Graphics { get { return graphics; } }
 
         /// <summary>
         /// The camera we use
@@ -89,6 +90,11 @@ namespace PrisonStep
         public void ShootPie(Pie pie)
         {
             shootingPies.Add(pie);
+        }
+
+        public void RemovePie(Pie pie)
+        {
+            shootingPiesToRemove.Add(pie);
         }
 
         public void RemoveSpit(Spit spit)
@@ -201,6 +207,8 @@ namespace PrisonStep
         }
 
 
+        List<Pie> shootingPiesToRemove = new List<Pie>();
+
         /// <summary>
         /// Allows the game to run logic such as updating the world,
         /// checking for collisions, gathering input, and playing audio.
@@ -216,16 +224,15 @@ namespace PrisonStep
             //lineDraw.Vertex(new Vector3(50, 100, 0), Color.Red);
             //lineDraw.End();
 
-            List<Pie> deletePies = new List<Pie>();
-            foreach (Pie pie in shootingPies)
-            {
-                if (!pie.Update(delta)) { deletePies.Add(pie); }
-            }
-            foreach (Pie pie in deletePies)
-            {
-                shootingPies.Remove(pie);
-            }
-            deletePies.Clear();
+                foreach (Pie pie in shootingPies)
+                {
+                    if (!pie.Update(delta, pie.MyTransform)) { shootingPiesToRemove.Add(pie); }
+                }
+                foreach (Pie pie in shootingPiesToRemove)
+                {
+                    shootingPies.Remove(pie);
+                }
+                shootingPiesToRemove.Clear();
 
             List<Spit> spitsToRemove = new List<Spit>();
             foreach (Spit spit in shootingSpits)
@@ -351,10 +358,11 @@ namespace PrisonStep
                 model.Draw(graphics, gameTime);
             }
 
-            foreach (Pie pie in shootingPies)
-            {
-                pie.Draw(graphics, gameTime, pie.MyTransform);
-            }
+                foreach (Pie pie in shootingPies)
+                {
+                    pie.Draw(graphics, gameTime, pie.MyTransform);
+                }
+         
 
             player.Draw(graphics, gameTime);
             alien1.Draw(graphics, gameTime);

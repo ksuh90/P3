@@ -171,10 +171,10 @@ namespace PrisonStep
             //    victoria.SpineAzimuth -= .1f;
             //}
 
-            if (keyboardState.IsKeyDown(Keys.Q) && !lastKeyboardState.IsKeyDown(Keys.Q))
-            {
-                location = new Vector3(1313, 0, -1440);
-            }
+            //if (keyboardState.IsKeyDown(Keys.Q) && !lastKeyboardState.IsKeyDown(Keys.Q))
+            //{
+            //    location = new Vector3(1313, 0, -1440);
+            //}
 
 
 
@@ -212,12 +212,14 @@ namespace PrisonStep
                         }
 
 
-                        if (gamePadState.IsButtonDown(Buttons.RightTrigger) && !lastGamePadState.IsButtonDown(Buttons.RightTrigger))
+                        if (gamePadState.IsButtonDown(Buttons.RightTrigger) && !lastGamePadState.IsButtonDown(Buttons.RightTrigger) || 
+                            keyboardState.IsKeyDown(Keys.A) && !lastKeyboardState.IsKeyDown(Keys.A))
                         {
                             state = States.StanceStartFiringPosition;
                         }
 
-                        if (gamePadState.IsButtonDown(Buttons.B) && !lastGamePadState.IsButtonDown(Buttons.B))
+                        if (gamePadState.IsButtonDown(Buttons.B) && !lastGamePadState.IsButtonDown(Buttons.B) ||
+                            keyboardState.IsKeyDown(Keys.Z) && !lastKeyboardState.IsKeyDown(Keys.Z))
                         {
                             state = States.StanceStartCrouch;
                         }
@@ -283,7 +285,8 @@ namespace PrisonStep
                             state = States.StanceStartRaised;
                             victoria.SpineElevation = 0f;
                         }
-                        if (gamePadState.IsButtonDown(Buttons.LeftTrigger) && !lastGamePadState.IsButtonDown(Buttons.LeftTrigger))
+                        if (gamePadState.IsButtonDown(Buttons.LeftTrigger) && !lastGamePadState.IsButtonDown(Buttons.LeftTrigger) ||
+                            keyboardState.IsKeyDown(Keys.Q) && !lastKeyboardState.IsKeyDown(Keys.Q))
                         {
                             bazooka.Shoot(Matrix.CreateRotationX(MathHelper.ToRadians(109.4f))*
                 Matrix.CreateRotationY(MathHelper.ToRadians(9.7f))*
